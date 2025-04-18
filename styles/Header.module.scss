@@ -1,6 +1,6 @@
 @use 'abstracts/variables';
 
-.container {
+.headerContainer {
     font-family: variables.$primaryFont;
     margin: 0;
     a {
@@ -10,8 +10,7 @@
 }
 
 .title {
-    //width: 205px;
-    width: 35%;
+    //width: 35%; //makes the name stack
     border-bottom: 2px solid variables.$accent;
     padding-bottom: 8px;
     margin-bottom: 0;
@@ -27,7 +26,7 @@
 }
 
 .nav {
-    margin: 2%;
+    margin: variables.$commonMarginSize;
     display: flex;
     justify-content: space-between;
 }

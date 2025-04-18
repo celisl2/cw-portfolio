@@ -1,0 +1,6 @@
+@use 'abstracts/variables';
+
+//shared component/pages styles
+.layout{
+    margin: variables.$commonMarginSize;
+}

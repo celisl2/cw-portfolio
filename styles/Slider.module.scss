@@ -1,0 +1,59 @@
+
+
+.slider {
+    //width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: baseline;
+}
+
+.imageContainer {
+    border-radius: 10px;
+    width: 80%;
+    height: 60%;
+    object-fit: cover;
+    //transition: all 0.8s ease-in;
+    // transition: opacity 1s ease-in-out;
+    // -moz-transition: opacity 1s ease-in-out;
+    // -webkit-transition: opacity 1s ease-in-out;
+    animation: 1s ease-in 0s 1 slideInFromLeft;
+    //animation: 3s ease-out 5s slideout;
+    //transition-timing-function: ease-out;
+    //transition: 0.5s;
+    // height: auto;
+    //min-width: 100%;
+    //min-height: 60px;
+    //transform-origin: bottom right;
+    //transform: scale(1.0);
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 40px;
+    align-self: center;
+    margin: 2%;
+}
+
+.arrow:hover {
+    //background-color: rgba(35, 90, 83, .3);
+    //text-shadow: 2px 2px;
+    transition: all 0.2s ease-in;
+    text-shadow: rgba(35, 90, 83, 0.36) 0px 3px 6px, rgba(35, 90, 83, 0.36) 0px 6px 6px;
+}
+
+@keyframes slideInFromLeft {
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1.0;
+    }
+  }

@@ -32,3 +32,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+#
+*.code-workspace
+
+# exclude images
+/public/assets/

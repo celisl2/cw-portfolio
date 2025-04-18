@@ -1,8 +1,8 @@
 import styles from '../styles/Header.module.scss';
-//https://www.youtube.com/watch?v=lPJVi797Uy0&ab_channel=Fireship
+
 const Header = () => {
     return (
-        <div>
+        <div className={styles.headerContainer}>
             <nav className={styles.nav}>
                 <a href='/'>
                     <div>

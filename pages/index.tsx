@@ -1,12 +1,20 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import Header from '../components/Header';
-import styles from '../styles/Header.module.scss';
+import styles from '../styles/Layout.module.scss';
+import Slider from '../components/Slider';
+
+const sliderSource = [
+  {src: './../public/assets/accordion/lc.JPG', alt: 'laura'},
+  {src: '/../public/assets/accordion/neck.jpg', alt: 'neck'}
+];
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Header />
+    <div>
+      <Header/>
+      <div className={styles.layout}>
+        <Slider />
+      </div>
+      
     </div>
   )
 }
