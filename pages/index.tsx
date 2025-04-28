@@ -12,9 +12,8 @@ export default function Home() {
     <div>
       <Header/>
       <div className={styles.layout}>
-        <Slider />
+        {/* <Slider /> */}
       </div>
-      
     </div>
   )
 }

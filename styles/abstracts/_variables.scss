@@ -1,10 +1,22 @@
 // Fonts
-$primaryFont: 'Rubik', sans-serif;
+// $primaryFont: 'Rubik', sans-serif;
+$primaryFont: "Outfit", sans-serif;
+$secondaryFont: "Rethink Sans", sans-serif;
 
 //Colors
-$background: #0C1618;
+$background: #E5E5E5;
 $white: #FFF;
 $accent: #A9E5BB;
+$boneBackground: #E0DDCF;
+$darkGreen: #165A43;
+$olive: #525D2C;
+$softGrey: #C6C7C4;
 
 //margins
 $commonMarginSize: 2%;
+
+//sizes
+$maxSizeMobile: 699px;
+$maxSmallMobileSize: 549px;
+$extraSmallMobileSize: 330px;
+$minSizeDesktop: 700px;

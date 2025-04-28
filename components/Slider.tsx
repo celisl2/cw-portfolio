@@ -6,7 +6,6 @@ import oth from './../public/assets/accordion/lc.jpg';
 import styles from '../styles/Slider.module.scss';
 
 
-
 const Slider = () => {
     const [index, setIndex] = useState(0);
     const srcs = [{imgSource: laura, alt: "laura"}, {imgSource: oth, alt: "other"} ];
@@ -18,30 +17,29 @@ const Slider = () => {
         return () => clearTimeout(timeout)
     }, [index, srcs.length]);
 
-    console.log(index);
+   // console.log(index);
 
     return (
-        <div /*>className={styles.slider} */>
+        <div className={styles.sliderWrapper}>
+            <span className={styles.arrow} onClick={getPrevious}>&#10094;</span>
             <>
             {
                 srcs.map((img, i) => {
                     if(index === i){
                         return (
-                            <div className={styles.slider} key={i}>
-                                <span className={styles.arrow} onClick={getPrevious}>&#10094;</span>
-                                <Image
-                                    className={styles.imageContainer}
-                                    src={img.imgSource}
-                                    alt={img.alt}
-                                    //height={500} width={500}
-                                />
-                                <span className={styles.arrow} onClick={getNext}>&#10095;</span>
-                            </div>
+                            <Image
+                                key={i}
+                                className={styles.imageContainer}
+                                src={img.imgSource}
+                                alt={img.alt}
+                                //height={500} width={500}
+                            />
                         )
                     }
                 })
             }
             </>
+            <span className={styles.arrow} onClick={getNext}>&#10095;</span>
         </div>
     );
 };

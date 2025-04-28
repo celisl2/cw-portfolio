@@ -5,28 +5,124 @@
     margin: 0;
     a {
         text-decoration: none;
-        color: inherit;
     }
 }
 
 .title {
-    //width: 35%; //makes the name stack
-    border-bottom: 2px solid variables.$accent;
     padding-bottom: 8px;
     margin-bottom: 0;
     font-size: 2.5em;
+    font-weight: 700;
     margin-top: 0;
+    color: variables.$darkGreen;
 }
 
 .specialHeader {
-    font-style: italic;
-    color: variables.$accent;
+    font-family: variables.$secondaryFont;
     margin-top: 8px;
     font-size: 2em;
+    font-weight: 400;
 }
 
 .nav {
     margin: variables.$commonMarginSize;
+    justify-content: space-between;
+    border-bottom: 2px solid variables.$olive;
+
+}
+
+.titles {
     display: flex;
     justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    margin: variables.$commonMarginSize;
+    a {
+        margin-left: 15px;
+        font-family: variables.$secondaryFont;
+        color: black;
+    }
+}
+
+.responsiveNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+.responsiveNav button {
+    background: none;
+    color: inherit;
+    border: none;
+    font-size: 3em;
+    align-self: center;
+}
+
+.links a:hover {
+    border-bottom: 2px solid variables.$olive;
+}
+
+//desktop styles
+@media(min-width: variables.$minSizeDesktop) {
+    .responsiveNav {
+        display: none;
+    }
+}
+
+//medium mobile styles
+@media (max-width: variables.$maxSizeMobile) {
+    .specialHeader, .titles, .links {
+        display: block;
+    }
+    .nav {
+        display: flex;
+    }
+
+    .links > a{
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 5px;
+    }
+
+    .links > a:not(:last-child){
+        border-bottom: 1px solid variables.$softGrey;
+    }
+
+    .links {
+        padding-bottom: 10px;
+        border-radius: 2px;
+        border-bottom: 2px solid variables.$olive;
+    }
+}
+
+//small mobile
+@media (max-width: variables.$maxSmallMobileSize){
+    .titles {
+        width: max-content;
+    }
+    .title {
+        font-size: 1.5em;
+    }
+    .specialHeader {
+        font-size: 1.25em;
+    }
+}
+
+//extra small mobile
+@media (max-width: variables.$extraSmallMobileSize){
+    .titles {
+        width: min-content;
+    }
+    .title {
+        font-size: 1.5em;
+    }
+    .specialHeader {
+        font-size: 1.25em;
+    }
 }

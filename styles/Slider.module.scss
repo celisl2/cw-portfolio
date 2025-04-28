@@ -1,12 +1,15 @@
-
-
-.slider {
+.sliderWrapper {
     //width: 80%;
     height: 100vh;
     display: flex;
     justify-content: center;
-    overflow: hidden;
-    align-items: baseline;
+    //current
+    // overflow: hidden;
+    // align-items: baseline;
+
+    //testing
+    // overflow-x: scroll;
+    // scroll-snap-type: x mandatory;
 }
 
 .imageContainer {
@@ -14,19 +17,7 @@
     width: 80%;
     height: 60%;
     object-fit: cover;
-    //transition: all 0.8s ease-in;
-    // transition: opacity 1s ease-in-out;
-    // -moz-transition: opacity 1s ease-in-out;
-    // -webkit-transition: opacity 1s ease-in-out;
-    animation: 1s ease-in 0s 1 slideInFromLeft;
-    //animation: 3s ease-out 5s slideout;
-    //transition-timing-function: ease-out;
-    //transition: 0.5s;
-    // height: auto;
-    //min-width: 100%;
-    //min-height: 60px;
-    //transform-origin: bottom right;
-    //transform: scale(1.0);
+    animation: fadeIn 2s linear;
 }
 
 .arrow {
@@ -43,17 +34,17 @@
     text-shadow: rgba(35, 90, 83, 0.36) 0px 3px 6px, rgba(35, 90, 83, 0.36) 0px 6px 6px;
 }
 
-@keyframes slideInFromLeft {
-    25% {
-        opacity: 0.25;
+@keyframes fadeIn {
+    0% {
+        opacity: 33%;
     }
-    50% {
-        opacity: 0.5;
+    20% {
+        opacity: 66%;
     }
-    75% {
-        opacity: 0.75;
+    40% {
+        opacity: 90%;
     }
     100% {
-        opacity: 1.0;
+        opacity: 100%;
     }
-  }
+}
