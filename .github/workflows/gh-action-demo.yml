@@ -1,0 +1,17 @@
+name: Demo GH Action - Security
+run-name: ${{ github.actor }} is testing out GitHub Actions
+on: [push, pull_request]
+
+jobs:
+  betterleaks:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: dortort/betterleaks-action@v0.1.0
+        id: betterleaks
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
